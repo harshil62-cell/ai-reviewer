@@ -3,6 +3,7 @@
   "displayName": "ai-reviewer",
   "description": "AI code Reviewer Agent",
   "version": "0.0.1",
+  "publisher":"HarshilVasani",
   "engines": {
     "vscode": "^1.107.0"
   },

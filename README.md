@@ -1,65 +1,62 @@
-# ai-reviewer README
+# AI Code Reviewer & Fixer 🤖✨
 
-This is the README for your extension "ai-reviewer". After writing up a brief description, we recommend including the following sections.
+**Your intelligent pair programmer.** Review code, fix bugs, and optimize logic instantly using Google Gemini AI—directly inside VS Code.
 
-## Features
+> **Note:** This extension puts YOU in control. It never modifies your files without your explicit permission. You see a side-by-side "Diff" and choose to `✅ Accept` or `❌ Reject` every change.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## ✨ Features
 
-For example if there is an image subfolder under your extension project workspace:
+* **🔍 Instant Code Analysis:** Detects bugs, syntax errors, and security risks in seconds.
+* **🛡️ Human-in-the-Loop:** Uses the VS Code "Diff View" to propose changes. Nothing is saved until you approve.
+* **⚡ Powered by Gemini:** Utilizes the latest Google Gemini 2.0 Flash model for fast, accurate fixes.
+* **📊 Summary Reports:** Get a detailed breakdown of what was fixed and why in the Output panel.
+* **📝 Explanation First:** The AI explains *why* it is suggesting a change before asking you to apply it.
 
-\!\[feature X\]\(images/feature-x.png\)
+## 🚀 How to Use
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+1.  Open any code file (JS, TS, HTML, CSS, etc.) in VS Code.
+2.  Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`).
+3.  Type and select: **`AI: Review Current File`**.
+4.  Wait for the analysis...
+5.  **Review the Diff:** The extension will open a comparison view.
+    * **Left:** Your original code.
+    * **Right:** The AI's suggested fix.
+6.  Click **Accept Fix** to apply changes or **Reject** to discard them.
 
-## Requirements
+## ⚙️ Extension Settings
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+This extension requires a Google Gemini API Key to function.
 
-## Extension Settings
+1.  Get your **free** API Key from [Google AI Studio](https://aistudio.google.com/).
+2.  In VS Code, go to **File > Preferences > Settings**.
+3.  Search for `AI Reviewer`.
+4.  Paste your key into the **Api Key** field.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+| Setting | Description |
+|Str |Str |
+| `aiReviewer.apiKey` | Your personal Google Gemini API Key. |
 
-For example:
+## 🔒 Privacy & Security Disclaimer
 
-This extension contributes the following settings:
+**Transparency is our priority.**
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+* **Data Transmission:** To perform the review, the content of the *currently active file* is sent to Google's Gemini API.
+* **No Storage:** This extension does not store your code on any external servers.
+* **Your Control:** No code is written to your disk until you click "Accept Fix."
+* **API Key:** Your API key is stored locally in your VS Code settings.
 
-## Known Issues
+## 📦 Installation
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+1.  Install via the Visual Studio Code Marketplace (Search "AI Code Reviewer").
+2.  Or, download the `.vsix` file and install manually.
 
-## Release Notes
+## 📝 Release Notes
 
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+### 0.0.1
+* Initial release.
+* Added "Propose Fix" feature with Diff View.
+* Added Summary Reports.
 
 ---
 
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+**Enjoying the extension?** Please leave a review! ⭐️⭐️⭐️⭐️⭐️
