@@ -1,0 +1,48 @@
+{
+  "name": "ai-reviewer",
+  "displayName": "ai-reviewer",
+  "description": "AI code Reviewer Agent",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.107.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ai-reviewer.startReview",
+        "title": "AI: Review Current File"
+      }
+    ],
+    "configuration": {
+      "title": "AI Reviewer",
+      "properties": {
+        "aiReviewer.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Enter your Google Gemini API Key here"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.107.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.39.1"
+  },
+  "dependencies": {
+    "@google/genai": "^1.34.0"
+  }
+}
